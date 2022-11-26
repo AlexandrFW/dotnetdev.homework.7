@@ -44,18 +44,18 @@ namespace WebClient
             {
                 customer = new Customer()
                 {
-                    Id = random.Next(1, 6),
-                    Firstname = Firstname,
-                    Lastname = Lastname
+                    Id = random.Next(1, 5),
+                    Firstname = _firstNames[random.Next(1, 5)],
+                    Lastname = _lastNames[random.Next(1, 5)]
                 };
             }
             else
             {
                 customer = new Customer()
                 {
-                    Id = random.Next(1, 6),
-                    Firstname = _firstNames[random.Next(1, 6)],
-                    Lastname = _firstNames[random.Next(1, 6)]
+                    Id = random.Next(1, 5),
+                    Firstname = Firstname,
+                    Lastname = Lastname
                 };
             }
 
