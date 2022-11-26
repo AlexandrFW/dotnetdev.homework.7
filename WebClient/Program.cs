@@ -90,7 +90,11 @@ namespace WebClient
 
                 Console.WriteLine($"Responce JSON: Customer = {responceString}");
 
-                var customer = JsonSerializer.Deserialize<Customer>(responceString);
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+                var customer = JsonSerializer.Deserialize<Customer>(responceString, options);
 
                 Console.WriteLine($"Responce Deserialized: Customer: Id = {customer.Id}, FirstName = {customer.Firstname}, LastName = {customer.Lastname}");
             }
